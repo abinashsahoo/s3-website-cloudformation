@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+    <title>My Digital Solutions</title>
+
+    <!-- ==============================================
+    Favicons
+    =============================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- ==============================================
+    CSS
+    =============================================== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Costume Main style -->
+    <!-- ==============================================
+    EXTERNAL CSS
+    ========= ====================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- ==============================================
+    MAIN CONTAINER
+    =============================================== -->
+    <div class="wrapper">
+        <div class="main-navbar">
+            <div class="navbar navbar-inverse navbar-fixed-left">
+                <ul id="nav">
+                    <li class="current"><a href="#top">WELCOME</a></li>
+                    <li><a href="#section2">OVERVIEW</a></li>
+                    <li><a href="#section3">ABOUT US</a></li>
+                    <li><a href="#section4">OUR SERVICES</a></li>
+                    <li><a href="#section5">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="top">
+            <div class="logo-brand">
+                <img src="img/my-logo.png" alt="">
+            </div>
+            <h1>Digital & Social Media Marketing Solutions</h1>
+            <hr>
+            <p>Welcome to My Digital Solutions - Your Gateway to Comprehensive Digital and Social Media Marketing Solutions!</p>
+        </div>
+
+        <div class="content" id="section2">
+            <h2>Overview</h2>
+            <hr class="custom">
+
+            <p>In the dynamic landscape of today's business environment, digital marketing stands out as a powerful tool for connecting with consumers. At My Digital Solutions, we specialize in leveraging the vast potential of the Internet to deliver strategic advertising through various digital channels. From search engines and websites to social media, email, and mobile apps, we are committed to helping companies endorse their goods, services, and brands effectively. In the ever-evolving realm of marketing, Digital Marketing remains the forefront, shaping the future of promotional strategies.</p>
+
+        </div>
+
+        <div class="content" id="section3">
+            <h2>About Us</h2>
+            <hr class="custom">
+
+            <p>At My Digital Solutions, we pride ourselves on our mastery of data analysis, enabling us to draw meaningful insights and stay ahead of the curve. Our team is characterized by agility, alertness, and a keen intelligence, ensuring we adapt seamlessly to the latest industry changes.</p>
+            <p>We possess advanced knowledge in social media marketing, allowing us to reach expansive audiences in a manner that is not only cost-effective but also measurable. Through our expertise, you can achieve more significant outreach while saving on costs compared to traditional marketing methods.</p>
+            <p>In today's diverse social media landscape, we strategically serve advertisements across a wide array of platforms. From the giants like Facebook, LinkedIn, and Google to microblogging sites such as Twitter and Tumblr, and popular photo and video sharing platforms like Instagram, Snapchat, Pinterest, YouTube, Facebook Live, Periscope, and Vimeo - we cover the spectrum to maximize your brand visibility.</p>
+        </div>
+
+        <div class="content" id="section4">
+            <h2>Our Services</h2>
+            <hr class="custom">
+
+            <p>My Digital Solutions is dedicated to assisting you in effectively marketing your products and services. We start by understanding your goals and delving into the intricacies of your target audience. Armed with this knowledge, we carefully select and navigate social media platforms, creating a bespoke game plan for your Social Media Marketing endeavors.</p>
+            <p>Partner with us to elevate your brand presence, connect with your audience, and embark on a winning journey in the realm of digital and social media marketing. At My Digital Solutions, we don't just follow trends; we set them.</p>
+            <p>Our highly experienced team is poised to guide you across various facets of digital marketing, including:</p>
+
+            <ol>
+                <li><strong>Search Engine Optimization (SEO):</strong> Elevate your online presence and enhance visibility on search engines.</li>
+                <li><strong>Search Engine Marketing (SEM):</strong> Utilize targeted advertising to maximize your reach and impact.</li>
+                <li><strong>Content Marketing (CM):</strong> Craft compelling narratives that resonate with your audience, driving engagement and loyalty.</li>
+                <li><strong>Social Media Marketing (SMM):</strong> Leverage the power of social platforms to connect, engage, and build a community around your brand.</li>
+                <li><strong>Email Marketing (EM):</strong> Reach your audience directly with personalized and effective email campaigns.</li>
+                <li><strong>Document Conversion Services (DCS):</strong> Streamline and digitize your document workflows for enhanced efficiency and accessibility.</li>
+            </ol>
+
+            <p>At My Digital Solutions, we're not just your partners; we're your digital advocates, committed to propelling your brand towards unprecedented success.</p>
+
+        </div>
+
+        <div class="content" id="section5">
+            <h2>Contact Us</h2>
+            <hr class="custom">
+
+            <p>
+                My DIGITAL SOLUTIONS,<br />
+                17 MY LANE, MATTITUCK, NY 11700 <br />
+                PH: +1 (123) 455-6789 <br />
+                EMAIL: <a href="mailto:Mydmsne@gmail.com" target="_self">Mydmsne@gmail.com</a>
+            </p>
+        </div>
+
+    </div><!--End Wrapper -->
+    <!-- ==============================================
+    SCRIPTS
+    =============================================== -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>  <!---- Bootstrap JavaScript ----->
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 500, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+</body>
+</html>    
