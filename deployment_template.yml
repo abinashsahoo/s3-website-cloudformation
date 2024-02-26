@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A template for static hosting using S3 bucket and CloudFront
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+      BucketName: your-static-site-bucket-name
+      CorsConfiguration: 
+      LifecycleConfiguration: 
+      NotificationConfiguration: 
+      VersioningConfiguration: 
+      WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html
+      Tags:
+        - Key: key
+          Value: value
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        DefaultRootObject: index.html
+        CacheBehaviors:
+        - 
+          behavior
+        Origins:
+          - DomainName: !GetAtt S3Bucket.DomainName
+            Id: S3Origin
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+        IPV6Enabled: true
+        ViewerCertificate:
+          CloudFrontDefaultCertificate: true
+      Tags:
+        - Key: key
+          Value: value
+
+Outputs:
+  S3BucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref S3Bucket
+  CloudFrontDistributionID:
+    Description: ID of the CloudFront Distribution
+    Value: !Ref CloudFrontDistribution
+  CloudFrontDistributionDomainName:
+    Description: Domain name of the CloudFront Distribution
+    Value: !GetAtt CloudFrontDistribution.DomainName
